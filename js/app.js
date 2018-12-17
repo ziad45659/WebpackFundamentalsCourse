@@ -1,3 +1,6 @@
+require('../css/bootstrap.css');
+require('../css/app.scss');
+
 import {login} from "./login" ;
 
 login('zuzu');
