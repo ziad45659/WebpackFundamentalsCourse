@@ -27,18 +27,6 @@ module.exports = {
     watch: true, // to enter watch mode
     module: {
         rules: [
-/*
-            {
-                test: /.js/,
-                enforce: 'pre',
-                exclude: /node_modules/,
-                use: [
-                    {
-                        loader: `jshint-loader`,
-                        options: {}
-                    }
-                ]
-            },*/
             { // babel loader
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -51,31 +39,7 @@ module.exports = {
                     'css-loader',
                     'sass-loader',
                 ],
-            },
-            /*{
-                test: /\.css$/,
-                 //exclude: /node_modules/,  // removed for the mini css extract plugin
-                //loader: "style-loader!css-loader" // if used like this, then css is loaded into the html and not to a separate file
-                //loader: ExtractTextPlugin.extract("style-loader", "css-loader")
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    {
-                        loader: "css-loader"
-                    }
-                ]
-
-
-            },*/
-            /*{
-                test: /\.scss$/,
-                exclude: /node_modules/,
-                loader: "style-loader!css-loader!sass-loader"
-                //loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
-                /!*use: [
-                    MiniCssExtractPlugin.loader,
-                    "sass-loader"
-                ]*!/
-            }*/
+            }
         ]
     },
     resolve: {
